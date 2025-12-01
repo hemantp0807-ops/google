@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Google Account</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 420px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+    padding: 35px;
+}
+
+.google{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.google span:nth-child(1){color:#4285F4;}
+.google span:nth-child(2){color:#DB4437;}
+.google span:nth-child(3){color:#F4B400;}
+.google span:nth-child(4){color:#4285F4;}
+.google span:nth-child(5){color:#0F9D58;}
+.google span:nth-child(6){color:#DB4437;}
+
+h2{
+    font-weight: 400;
+}
+
+.input-box{
+    width: 170px;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:3px;
+    margin-bottom:15px;
+}
+
+.input-full{
+    width: 372px;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:3px;
+}
+
+.small{
+    font-size:12px;
+    color:#666;
+}
+
+.blue{
+    color:#1a73e8;
+    font-size:13px;
+    cursor:pointer;
+}
+
+.eye{
+    cursor:pointer;
+    padding:10px;
+}
+
+button{
+    background:#1a73e8;
+    color:#fff;
+    border:none;
+    padding:10px 25px;
+    border-radius:3px;
+    cursor:pointer;
+    float:right;
+}
+
+.signin{
+    color:#1a73e8;
+    font-size:13px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<section class="container">
+
+<p class="google">
+<span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+</p>
+
+<h2>Create your Google Account</h2>
+
+<!-- IMPORTANT: method="post" and correct name="..." attributes -->
+<form action="save_account.php" method="post">
+
+    <input type="text" class="input-box" name="first_name" placeholder="First name" required>
+    &nbsp;
+    <input type="text" class="input-box" name="last_name" placeholder="Last name" required><br>
+
+    <input type="text" class="input-full" name="username" placeholder="Username" required><br>
+    <p class="small">You can use letters, numbers & periods</p>
+
+    <p class="blue">Use my current email address instead</p>
+
+    <input type="password" class="input-box" name="password" placeholder="Password" required>
+    &nbsp;
+    <span class="eye">&#128065;</span>
+    <input type="password" class="input-box" name="confirm_password" placeholder="Confirm" required><br>
+
+    <p class="small">Use 8 or more characters with a mix of letters, numbers & symbols</p>
+
+    <span class="signin">Sign in instead</span>
+    <button type="submit">Next</button>
+
+</form>
+
+</section>
+
+</body>
+</html>
